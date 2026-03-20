@@ -4,12 +4,12 @@
 ---
 
 ## Aim  
-To design and simulate basic logic gates (AND, OR, NOT) using **universal gates (NAND and NOR)** in **NI Multisim**.
+To design and simulate basic logic gates (AND, OR, NOT) using **universal gates (NAND and NOR)** in **Multisim**.
 
 ---
 
 ## Software Requirements  
-- NI Multisim (Electronic Circuit Simulation Software)
+- Logisim (Electronic Circuit Simulation Software)
 ---
 
 ## Theory  
@@ -27,9 +27,9 @@ Using **De Morgan’s Theorem**, we can construct all basic gates using only NAN
 
 ## Procedure  
 
-## Part A: Design using Basic Gates (Direct Implementation in Multisim)
+## Part A: Design using Basic Gates (Direct Implementation in Logisim)
 
-1. Open **NI Multisim** and create a new circuit.  
+1. Open **Logisim** and create a new circuit.  
 2. From the component library, place the following **basic gates**:  
    - AND Gate  
    - OR Gate  
@@ -52,9 +52,9 @@ Using **De Morgan’s Theorem**, we can construct all basic gates using only NAN
 4. Run the simulation.  
 5. Toggle input switches and verify outputs with the truth tables.
 
-### Part B: Using NAND Gates in Multisim  
+### Part B: Using NAND Gates in Logisim  
 
-1. Open **NI Multisim** and create a new design.  
+1. Open **Logisim** and create a new design.  
 2. Place **NAND gates** from the component library.  
 3. Implement the following:
 
@@ -104,19 +104,19 @@ Using **De Morgan’s Theorem**, we can construct all basic gates using only NAN
 
 - The simulated outputs match the expected truth tables.  
 - NAND and NOR gates successfully implement all basic logic gates.  
-- Multisim provides accurate and real-time verification of logic behavior.
+- Logisim provides accurate and real-time verification of logic behavior.
 
 ---
 
 ## Result  
 
-Basic logic gates (AND, OR, NOT) were successfully **designed and simulated using universal gates (NAND and NOR) in NI Multisim**.
+Basic logic gates (AND, OR, NOT) were successfully **designed and simulated using universal gates (NAND and NOR) in Logisim**.
 
 ---
 
 ## Precautions  
 
-- Ensure correct selection of logic gate components in Multisim.  
+- Ensure correct selection of logic gate components in Logisim.  
 - Verify all connections before running simulation.  
 - Use proper input sources (logic switches) and output indicators.  
 

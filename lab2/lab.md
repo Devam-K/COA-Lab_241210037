@@ -1,123 +1,181 @@
-# Computer Organization & Architecture Lab  
-## Experiment 1: Design of Basic Logic Gates using Universal Gates (Using Multisim)
+# COA Lab Experiment
+
+## Design and Implementation of Multiplexers, Priority Encoder, and Boolean Functions using Logisim
 
 ---
 
-## Aim  
-To design and simulate basic logic gates (AND, OR, NOT) using **universal gates (NAND and NOR)** in **NI Multisim**.
+## Aim
+
+To design, implement, and verify the following combinational circuits using Logisim:
+
+* Multiplexer using smaller MUX units (MUX tree)
+* 8:1 Multiplexer
+* Priority Encoder
+* Boolean functions using Sum of Products (SOP) form
+
+---
+## Software Used
+
+Logisim (NI Circuit Design Suite)
 
 ---
 
-## Software Requirements  
-- NI Multisim (Electronic Circuit Simulation Software)
----
+## Theory
 
-## Theory  
+### Multiplexer (MUX)
 
-Logic gates are the basic building blocks of digital circuits. The fundamental gates are:  
-- AND Gate  
-- OR Gate  
-- NOT Gate  
+A multiplexer is a combinational circuit that selects one input from multiple inputs and forwards it to a single output based on select lines.
 
-**Universal Gates** such as NAND and NOR can be used to implement any Boolean function.
+For an ( 8:1 ) multiplexer:
 
-Using **De Morgan’s Theorem**, we can construct all basic gates using only NAND or only NOR gates.
+* Number of inputs = 8
+* Number of select lines = 3
+* Output depends on the binary value of select lines
 
 ---
 
-## Procedure  
+### MUX Tree (Hierarchical Design)
 
-## Part A: Design using Basic Gates (Direct Implementation in Multisim)
+A larger multiplexer can be constructed using smaller multiplexers. For example, an ( 8:1 ) MUX can be implemented using multiple ( 2:1 ) MUX units arranged in stages:
 
-1. Open **NI Multisim** and create a new circuit.  
-2. From the component library, place the following **basic gates**:  
-   - AND Gate  
-   - OR Gate  
-   - NOT Gate  
+* First stage selects between input pairs
+* Intermediate stages combine outputs
+* Final stage produces a single output
 
-3. Perform the following implementations:
-
-   - **AND Gate**  
-     - Connect two input switches (A, B) to the AND gate.  
-     - Connect output to an LED or logic probe.  
-
-   - **OR Gate**  
-     - Connect two input switches (A, B) to the OR gate.  
-     - Observe output using LED/probe.  
-
-   - **NOT Gate**  
-     - Connect a single input switch (A) to the NOT gate.  
-     - Observe inverted output.  
-
-4. Run the simulation.  
-5. Toggle input switches and verify outputs with the truth tables.
-
-### Part B: Using NAND Gates in Multisim  
-
-1. Open **NI Multisim** and create a new design.  
-2. Place **NAND gates** from the component library.  
-3. Implement the following:
-
-   - **NOT Gate using NAND**  
-     - Connect both inputs of a NAND gate together.  
-
-   - **AND Gate using NAND**  
-     - Use two NAND gates.  
-     - First NAND performs NAND operation.  
-     - Second NAND acts as inverter.
-
-   - **OR Gate using NAND**  
-     - Use three NAND gates based on De Morgan’s theorem.  
-
-4. Add input switches and output indicators (LEDs or probes).  
-5. Run the simulation and verify outputs.
+This approach demonstrates modular and scalable circuit design.
 
 ---
 
-## Truth Tables  
+### Priority Encoder
 
-### AND Gate  
-| A | B | Output |
-|---|---|--------|
-| 0 | 0 |   0    |
-| 0 | 1 |   0    |
-| 1 | 0 |   0    |
-| 1 | 1 |   1    |
+A priority encoder is a combinational circuit that outputs the binary representation of the highest-priority active input.
 
-### OR Gate  
-| A | B | Output |
-|---|---|--------|
-| 0 | 0 |   0    |
-| 0 | 1 |   1    |
-| 1 | 0 |   1    |
-| 1 | 1 |   1    |
-
-### NOT Gate  
-| A | Output |
-|---|--------|
-| 0 |   1    |
-| 1 |   0    |
+* If multiple inputs are active, the input with the highest priority is encoded
+* A valid output signal may be used to indicate the presence of an active input
 
 ---
 
-## Observations  
+### Boolean Function using SOP
 
-- The simulated outputs match the expected truth tables.  
-- NAND and NOR gates successfully implement all basic logic gates.  
-- Multisim provides accurate and real-time verification of logic behavior.
+Boolean functions can be implemented using Sum of Products (SOP) form:
+
+* AND gates generate minterms
+* OR gates combine selected minterms
+
+Example:
+[
+F = \Sigma m(4,5,6,7)
+]
+
+---
+
+## Components Used
+
+* 2:1 Multiplexers
+* 8:1 Multiplexer
+* Priority Encoder module
+* AND gates
+* OR gates
+* Input switches (logic 0 and 1)
+* LEDs (output indicators)
+* Connecting wires
 
 ---
 
-## Result  
+## Circuit Description
 
-Basic logic gates (AND, OR, NOT) were successfully **designed and simulated using universal gates (NAND and NOR) in NI Multisim**.
+### MUX Tree Implementation
+
+Multiple 2:1 multiplexers are connected in a hierarchical structure:
+
+* First level processes input pairs
+* Outputs are fed into higher-level multiplexers
+* Final stage produces a single output
+
+This configuration behaves as a higher-order multiplexer.
 
 ---
 
-## Precautions  
+### Priority Encoder
 
-- Ensure correct selection of logic gate components in Multisim.  
-- Verify all connections before running simulation.  
-- Use proper input sources (logic switches) and output indicators.  
+* Multiple inputs are connected to the encoder
+* Output lines represent the binary index of the highest-priority active input
+* LEDs indicate the encoded output
 
 ---
+
+### 8:1 Multiplexer
+
+* Eight inputs are connected (logic constants or signals)
+* Three select lines determine which input is passed to the output
+* Output is observed using an LED
+
+---
+
+### SOP Logic Implementation
+
+* Inputs are applied to AND gates to generate minterms
+* Selected minterms are combined using OR gates
+* Multiple outputs represent different Boolean expressions:
+
+[
+F_1 = \Sigma m(4,5,6,7)
+]
+[
+F_2 = \Sigma m(2,3,6,7)
+]
+[
+F_3 = \Sigma m(1,3,5,7)
+]
+
+---
+
+## Procedure
+
+* Open Logisim and create a new design file
+* Place the required components from the component library
+* Construct the circuits:
+
+  * Build the MUX tree using 2:1 multiplexers
+  * Configure the 8:1 multiplexer with appropriate inputs and select lines
+  * Connect the priority encoder with multiple inputs and output indicators
+  * Implement SOP expressions using AND and OR gates
+* Provide input values using switches
+* Run the simulation
+* Observe and verify outputs using LEDs
+
+---
+
+## Observations
+
+* The multiplexer correctly selects inputs based on select lines
+* The MUX tree behaves as a higher-order multiplexer
+* The priority encoder outputs the correct binary value for the highest-priority active input
+* SOP-based circuits generate correct outputs for given input combinations
+
+---
+
+## Result
+
+All circuits were successfully designed and simulated in Logisim. The outputs obtained match the expected theoretical results.
+
+---
+
+## Conclusion
+
+The experiment demonstrates:
+
+* Implementation of multiplexers using both direct and hierarchical approaches
+* Working of a priority encoder
+* Realization of Boolean functions using SOP form
+* Practical understanding of combinational circuit design
+
+---
+
+
+---
+
+## Author
+
+Devam
+Course: Computer Organization and Architecture Lab
