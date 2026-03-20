@@ -62,10 +62,6 @@ Boolean functions can be implemented using Sum of Products (SOP) form:
 * AND gates generate minterms
 * OR gates combine selected minterms
 
-Example:
-[
-F = \Sigma m(4,5,6,7)
-]
 
 ---
 
@@ -118,15 +114,6 @@ This configuration behaves as a higher-order multiplexer.
 * Selected minterms are combined using OR gates
 * Multiple outputs represent different Boolean expressions:
 
-[
-F_1 = \Sigma m(4,5,6,7)
-]
-[
-F_2 = \Sigma m(2,3,6,7)
-]
-[
-F_3 = \Sigma m(1,3,5,7)
-]
 
 ---
 
@@ -171,11 +158,3 @@ The experiment demonstrates:
 * Practical understanding of combinational circuit design
 
 ---
-
-
----
-
-## Author
-
-Devam
-Course: Computer Organization and Architecture Lab
