@@ -2,7 +2,6 @@
 
 ## 4-Bit Ripple Carry Adder and Delay Analysis using Basic Gates in Logisim
 
----
 
 ## Aim
 
@@ -117,6 +116,8 @@ This delay is called **carry propagation delay**.
 * Provide inputs using input pins
 * Observe outputs (sum and carry) using output pins
 * Test the circuit with different binary inputs
+
+<img width="1219" height="934" alt="Logism3" src="https://github.com/user-attachments/assets/ccc739bf-1a42-4699-9b9b-3c723a97f28c" />
 
 ---
 
