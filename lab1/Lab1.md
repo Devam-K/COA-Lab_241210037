@@ -72,6 +72,8 @@ Using **De Morgan’s Theorem**, we can construct all basic gates using only NAN
 4. Add input switches and output indicators (LEDs or probes).  
 5. Run the simulation and verify outputs.
 
+<img width="551" height="614" alt="Gates2" src="https://github.com/user-attachments/assets/e85ae123-f34c-40e1-b827-d12106729a99" />
+
 ---
 
 ## Truth Tables  
