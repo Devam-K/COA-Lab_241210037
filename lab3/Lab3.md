@@ -32,6 +32,9 @@ For a 4-bit RCA:
 * Inputs: ( A_3A_2A_1A_0 ), ( B_3B_2B_1B_0 ), and initial carry ( C_0 )
 * Outputs: Sum bits ( S_3S_2S_1S_0 ) and final carry ( C_4 )
 
+<img width="723" height="522" alt="image" src="https://github.com/user-attachments/assets/cf95e8cc-9f59-4231-81ce-04b5ebd374df" />
+
+
 ---
 
 ### Full Adder using Basic Gates
@@ -47,6 +50,9 @@ A full adder can be implemented using basic gates (AND, OR, XOR):
   [
   C_{out} = (A \cdot B) + (C_{in} \cdot (A \oplus B))
   ]
+
+  <img width="1234" height="371" alt="image" src="https://github.com/user-attachments/assets/4dd2748a-ac5b-49ae-b68d-3f11e21e08d9" />
+
 
 ---
 
