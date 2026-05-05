@@ -15,15 +15,15 @@ This repository contains a structured collection of laboratory experiments condu
 ---
 
 ## Repository Structure
-
 ```
 COA-Lab-Repository/
 ├── Experiment-01_Basic-Logic-Circuits/
-├── Experiment-02_4bit-Ripple-Carry-Adder/
-├── Experiment-03_GDB-Debugger/
-├── Experiment-04_8bit-Shift-Register/
-├── Experiment-05_Addressing-Modes/
-├── Experiment-06_Shift-Registers-Logisim/
+├── Experiment-02_Multiplexers, Priority Encoder, and Boolean Functions/
+├── Experiment-03_4bit-Ripple-Carry-Adder/
+├── Experiment-04_GDB-Debugger/
+├── Experiment-05_8bit-Shift-Register/
+├── Experiment-06_Addressing-Modes/
+├── Experiment-07_Shift-Registers-Logisim/
 └── README.md
 ```
 
@@ -36,27 +36,32 @@ COA-Lab-Repository/
 Implementation of fundamental logic gates — AND, OR, NOT, NAND, NOR, and XOR — along with basic combinational circuits. This experiment establishes the foundation for understanding digital logic design and Boolean operations.
 
 
-### Experiment 02 — 4-Bit Ripple Carry Adder
+### Experiment 02 — Multiplexers, Priority Encoder, and Boolean Functions
+
+Design and implementation of multiplexers and priority encoders along with the simplification and realization of Boolean functions. This experiment focuses on understanding data selection circuits, encoding techniques, and applying Boolean algebra for efficient digital system design.
+
+
+### Experiment 03 — 4-Bit Ripple Carry Adder
 
 Design and simulation of a 4-bit ripple carry adder constructed using full adder modules. This experiment demonstrates the principles of binary addition and carry propagation in arithmetic logic circuits.
 
 
-### Experiment 03 — GDB Debugger (Compiler-Level Debugging)
+### Experiment 04 — GDB Debugger (Compiler-Level Debugging)
 
 Practical debugging of C programs using the GNU Debugger (GDB). Topics covered include setting breakpoints, step-by-step execution, variable inspection, stack tracing, and runtime error identification.
 
 
-### Experiment 04 — 8-Bit Shift Register Using Flip-Flops
+### Experiment 05 — 8-Bit Shift Register Using Flip-Flops
 
 Design and analysis of an 8-bit shift register implemented using D Flip-Flops. This experiment highlights sequential circuit behavior, clock-driven data shifting, and storage operations in digital systems.
 
 
-### Experiment 05 — Addressing Modes
+### Experiment 06 — Addressing Modes
 
 Execution and analysis of various processor addressing modes using GDB. This experiment provides a practical understanding of how instructions locate and access operands in memory during program execution.
 
 
-### Experiment 06 — Shift Registers (Logisim Simulation)
+### Experiment 07 — Shift Registers (Logisim Simulation)
 
 Simulation of multiple shift register configurations — SISO, SIPO, PISO, and PIPO — using Logisim. This experiment offers a visual and interactive approach to understanding data flow and storage in sequential circuits.
 
